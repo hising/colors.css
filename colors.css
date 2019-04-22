@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: var(--white);
-    color: var(--black);
+    color: var(--gray-shade);
     padding: 20px;
 }
 
@@ -59,8 +59,9 @@ body {
 .alert {
     margin: 12px 0;
     padding: 12px;
-    background-color: var(--orange-tint);
-    border: 1px solid var(--orange);
+    background-color: var(--blue-tint);
+    border: 1px solid var(--blue);
+    color: var(--blue-shade);
 }
 
 .yellow-gradient {
@@ -68,4 +69,20 @@ body {
     padding: 12px;
     background-image: linear-gradient(var(--yellow-tint), var(--yellow));
     border: 1px solid var(--yellow);
+    color: var(--yellow-shade);
+}
+
+.gray-gradient {
+    margin: 12px 0;
+    padding: 12px;
+    background-image: linear-gradient(var(--gray-tint), var(--gray));
+    border: 1px solid var(--gray);
+}
+
+.white-gradient {
+    margin: 12px 0;
+    padding: 12px;
+    background-image: linear-gradient(var(--white), var(--white-shade));
+    border: 1px solid var(--white-shade);
+    box-shadow: 0 0 4px var(--gray-tint);
 }
