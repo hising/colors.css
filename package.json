@@ -1,0 +1,29 @@
+{
+  "name": "colors.css",
+  "version": "1.0.0",
+  "description": "![Screendump](colors.png \"Colors\")",
+  "main": "index.js",
+  "bin": {
+    "colors.css": "colors.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3"
+  },
+  "scripts": {
+    "generate": "npx babel-node bin/generate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hising/colors.css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hising/colors.css/issues"
+  },
+  "homepage": "https://github.com/hising/colors.css#readme"
+}
