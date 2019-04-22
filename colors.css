@@ -40,12 +40,13 @@ body {
 }
 
 .btn {
-    background-color: var(--green-tint);
+    background-color: var(--red-tint);
+    border-radius: 2px;
     color: var(--white);
     text-decoration: none;
     display: inline-block;
     line-height: 40px;
     padding: 0 24px;
-    border: 1px solid var(--green);
-    box-shadow: 0 0 2px var(--green-shade);
+    border: 1px solid var(--red);
+    box-shadow: 0 0 2px var(--red-shade);
 }
