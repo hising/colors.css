@@ -1,0 +1,40 @@
+:root {
+    --black: #1d1d1d;
+    --white: #f7f7f7;
+    --gray: #999799;
+    --blue: #30C5FF;
+    --green: #90BE6D;
+    --red: #FF521B;
+    --orange: #EA9010;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.color {
+    padding: 80px;
+    text-align: center;
+}
+
+.color.gray {
+    background-color: var(--gray);
+}
+
+.color.blue {
+    background-color: var(--blue);
+}
+
+.color.green {
+    background-color: var(--green);
+}
+
+.color.red {
+    background-color: var(--red);
+}
+
+.color.orange {
+    background-color: var(--orange);
+}
