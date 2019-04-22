@@ -1,19 +1,7 @@
-:root {
-    --black: #1d1d1d;
-    --white: #f7f7f7;
-    --gray: #5E747F;
-    --blue: #27a2d2;
-    --green: #90BE6D;
-    --red: #df3a1a;
-    --pink: #E5C1BD;
-    --orange: #EA9010;
-    --yellow: #eadb2c;
-}
-
 body {
     font-family: sans-serif;
-    background-color: var(--black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
 }
 
 .color {
@@ -49,4 +37,15 @@ body {
 .color.yellow {
     background-color: var(--yellow);
     color: var(--black);
+}
+
+.btn {
+    background-color: var(--green-tint);
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 40px;
+    padding: 0 24px;
+    border: 1px solid var(--green);
+    box-shadow: 0 0 2px var(--green-shade);
 }
