@@ -2,6 +2,7 @@ body {
     font-family: sans-serif;
     background-color: var(--white);
     color: var(--black);
+    padding: 20px;
 }
 
 .color {
@@ -40,13 +41,31 @@ body {
 }
 
 .btn {
-    background-color: var(--red-tint);
+    background-image: linear-gradient(var(--red-tint), var(--red));
     border-radius: 2px;
     color: var(--white);
     text-decoration: none;
     display: inline-block;
     line-height: 40px;
     padding: 0 24px;
-    border: 1px solid var(--red);
+    border: 1px solid var(--red-shade);
     box-shadow: 0 0 2px var(--red-shade);
+}
+
+.btn:hover {
+    background-image: linear-gradient(var(--red), var(--red-shade));
+}
+
+.alert {
+    margin: 12px 0;
+    padding: 12px;
+    background-color: var(--orange-tint);
+    border: 1px solid var(--orange);
+}
+
+.yellow-gradient {
+    margin: 12px 0;
+    padding: 12px;
+    background-image: linear-gradient(var(--yellow-tint), var(--yellow));
+    border: 1px solid var(--yellow);
 }

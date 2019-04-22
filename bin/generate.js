@@ -10,7 +10,7 @@ for (let colorName in colors) {
         const hex = colors[colorName];
         const rgb = hexToRgb(hex);
 
-        const lighter = rgbToHex(tint(rgb, .25));
+        const lighter = rgbToHex(tint(rgb, .55));
         const darker = rgbToHex(shade(rgb, .75));
 
         theme[`${colorName}-tint`] = lighter;
