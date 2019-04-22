@@ -1,4 +1,4 @@
-const hexToRgb = (hex) => {
+export const hexToRgb = (hex) => {
     let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
         ? {
@@ -9,7 +9,7 @@ const hexToRgb = (hex) => {
         : null;
 };
 
-const rgbToHsl = ({red, green, blue}) => {
+export const rgbToHsl = ({red, green, blue}) => {
     let r = red / 255;
     let g = green / 255;
     let b = blue / 255;
@@ -35,24 +35,24 @@ const rgbToHsl = ({red, green, blue}) => {
     return { hue, saturation, lightness };
 };
 
-const hslToRgb = ({hue, saturation, lightness}) => {
+export const hue2rgb = (p, q, t) => {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1/6) return p + (q - p) * 6 * t;
+    if (t < 1/2) return q;
+    if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+    return p;
+};
+// Func from https://gist.github.com/ConnorAtherton/8291994
+
+export const hslToRgb = ({hue, saturation, lightness}) => {
     let r, g, b;
 
     if (s === 0) {
-        r = g = b = lightness; // achromatic
+        r = g = b = lightness;
     } else {
-        function hue2rgb(p, q, t) {
-            if (t < 0) t += 1;
-            if (t > 1) t -= 1;
-            if (t < 1/6) return p + (q - p) * 6 * t;
-            if (t < 1/2) return q;
-            if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
-            return p;
-        }
-
         const q = lightness < 0.5 ? lightness * (1 + saturation) : lightness + saturation - lightness * saturation;
         const p = 2 * lightness - q;
-
         r = hue2rgb(p, q, hue + 1/3);
         g = hue2rgb(p, q, hue);
         b = hue2rgb(p, q, hue - 1/3);
