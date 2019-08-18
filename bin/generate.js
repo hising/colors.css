@@ -28,3 +28,16 @@ cssVarsString += "}\n";
 fs.writeFile("vars.css", cssVarsString, (err) => {
     if (err) console.log(err);
 });
+
+fs.writeFile("vars.json", JSON.stringify(theme, null, 2), (err) => {
+    if (err) console.log(err);
+});
+
+let scssVarsString = "";
+for (let varName in theme) {
+    scssVarsString += "$" + varName + ": " + theme[varName] + ";\n";
+}
+
+fs.writeFile("vars.scss", scssVarsString, (err) => {
+    if (err) console.log(err);
+});
