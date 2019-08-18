@@ -41,3 +41,7 @@ for (let varName in theme) {
 fs.writeFile("vars.scss", scssVarsString, (err) => {
     if (err) console.log(err);
 });
+
+fs.writeFile("vars.less", scssVarsString.replace(/\$/g, '@'), (err) => {
+    if (err) console.log(err);
+});
