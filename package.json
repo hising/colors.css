@@ -8,9 +8,9 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "@babel/node": "^7.2.2",
-    "@babel/preset-env": "^7.4.3"
+    "@babel/core": "^7.19.3",
+    "@babel/node": "^7.19.1",
+    "@babel/preset-env": "^7.19.4"
   },
   "scripts": {
     "generate": "npx babel-node bin/generate.js"
